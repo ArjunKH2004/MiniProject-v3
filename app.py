@@ -102,7 +102,7 @@ def main():
     model, tfidf = load_models()
 
     # YouTube API setup
-    API_KEY = "AIzaSyB-kZZzAsasrRK3OVOmg0id8cDiAx_wItE"
+    API_KEY = "YOUR_YOUTUBE_API_KEY"  # Replace with your actual API key
     youtube = build('youtube', 'v3', developerKey=API_KEY)
 
     # Section for Live Chat Monitoring
@@ -148,3 +148,7 @@ def main():
                     if "items" in chat_response:
                         for item in chat_response["items"]:
                             author = item["authorDetails"]["displayName"]
+                            message = item["snippet"]["displayMessage"]
+                            
+                            new_text = message
+                            text_tfid
