@@ -147,4 +147,4 @@ def main():
                     chat_response = requests.get(chat_url, params=chat_params).json()
                     if "items" in chat_response:
                         for item in chat_response["items"]:
-                            author = item["authorDetails"]["display
+                            author = item["authorDetails"]["displayName"]
